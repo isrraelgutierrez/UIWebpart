@@ -86,7 +86,7 @@ export default class Accordion extends React.Component<IAccordionProps, IAccordi
                           {...provided.dragHandleProps}
                         >
                           <div>
-                            <div key={index}>
+                            <div key={heroe.id}>
                               <div className="card mb-4 shadow-sm">
                                 <div className="row no-gutters item">
                                   <div className="col-4 bg-black d-flex align-items-center">
