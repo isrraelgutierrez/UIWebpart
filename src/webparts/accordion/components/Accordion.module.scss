@@ -1,5 +1,53 @@
+:root {
+  --baseColor: 23, 162, 184;
+  --textColor: 0, 0, 0;
+  --black: 0, 0, 0;
+}
+
 :global {
   .bg-black {
-    background-color: black;
+    background-color: rgba(var(--black), 1);
+  }
+
+  .object-fit {
+    &-cover {
+      object-fit: cover;
+    }
+
+    &-contain {
+      object-fit: contain;
+    }
+  }
+
+  .themable {
+
+
+    &.theme {
+      &-dark {
+        --baseColor: 0, 0, 0;
+        --textColor: 255, 255, 255;
+      }
+
+      &-blue {
+        --baseColor: 0, 123, 255;
+      }
+
+      &-red {
+        --baseColor: 220, 53, 69;
+      }
+    }
+
+    color: rgba(var(--textColor), 1);
+
+    .card-header,
+    .card-footer {
+      background-color: rgba(var(--baseColor), 0.5);
+      transition: all 1s ease;
+    }
+
+    .card-body {
+      background-color: rgba(var(--baseColor), 0.2);
+      transition: all 1s ease;
+    }
   }
 }
