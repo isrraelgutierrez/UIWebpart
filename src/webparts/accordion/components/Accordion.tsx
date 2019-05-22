@@ -1,10 +1,14 @@
+//TODO: Homework: Generate new components for buttons, and items
+//TODO: Import bootstrap and font awesome
+//TODO: Add SCSS reference as plain import instead of Module CSS
+//TODO: Add animations
 import * as React from 'react';
 import './Accordion.module.scss';
 import './../../styles/animations.css'; 
 import { IAccordionProps } from './IAccordionProps';
 import { IAccordionState } from './IAccordionState';
 import { escape } from '@microsoft/sp-lodash-subset';
-import { SPComponentLoader } from "@microsoft/sp-loader";
+
 import { Heroes } from './heroes';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
@@ -14,15 +18,6 @@ export default class Accordion extends React.Component<IAccordionProps, IAccordi
 
   constructor(props: IAccordionProps) {
     super(props);
-    const externalCSS = [
-      "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css",
-      "https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    ];
-    externalCSS.forEach(css => {
-      SPComponentLoader.loadCss(
-        css
-      );
-    });
     this.state = {
       heroes: Heroes,
       theme: 'default'

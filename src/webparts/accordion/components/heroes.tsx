@@ -1,3 +1,4 @@
+//TODO: Homework: Add interface
 export const Heroes =
     [
         {
